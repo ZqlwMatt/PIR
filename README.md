@@ -22,6 +22,10 @@ The official implementation of paper "Photometric Inverse Rendering: Shading Mod
 
 
 
+https://github.com/user-attachments/assets/0d5d7aac-0d86-49a2-be60-f32a0212bb2d
+
+
+
 
 ## Citation
 
