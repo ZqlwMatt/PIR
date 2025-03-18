@@ -1,0 +1,102 @@
+{
+    "sdf_network": {
+      "d_in": 3,
+      "d_out": 257,
+      "d_hidden": 256,
+      "n_layers": 8,
+      "skip_in": [4],
+      "multires": 6,
+      "bias": 0.5,
+      "scale": 1.0,
+      "geometric_init": true,
+      "weight_norm": true
+    },
+
+    "diffuse_albedo_network": {
+      "d_in": 9,
+      "d_out": 3,
+      "d_feature": 256,
+      "d_hidden": 256,
+      "n_layers": 8,
+      "multires": 10,
+      "multires_view": 4,
+      "mode": "idr",
+      "squeeze_out": true,
+      "skip_in": [4]
+    },
+
+    "specular_albedo_network": {
+      "d_in": 262,
+      "d_out": 3,
+      "d_feature": 384,
+      "d_hidden": 256,
+      "n_layers": 4,
+      "multires": 6,
+      "multires_view": -1,
+      "mode": "no_view_dir",
+      "squeeze_out": false,
+      "output_bias": 0.4,
+      "output_scale": 0.1
+    },
+
+    "specular_roughness_network": {
+      "d_in": 262,
+      "d_out": 1,
+      "d_feature": 384,
+      "d_hidden": 256,
+      "n_layers": 4,
+      "multires": 6,
+      "multires_view": -1,
+      "mode": "no_view_dir",
+      "squeeze_out": false,
+      "output_bias": 0.1,
+      "output_scale": 0.1
+    },
+
+    "dino_network": {
+      "d_in": 3,
+      "d_out": 384,
+      "d_hidden": 256,
+      "n_layers": 4,
+      "skip_in": [],
+      "multires": 6,
+      "output_bias": 0.0,
+      "output_scale": 1.0
+    },
+    
+    "blend_network": {
+      "d_in": 3,
+      "d_out": 1,
+      "d_hidden": 128,
+      "n_layers": 4,
+      "multires_view": 6,
+      "squeeze_out": false
+    },
+
+    "optimizer": {
+      "sdf_network": {
+        "lr": 1e-5
+      },
+      "diffuse_albedo_network": {
+        "lr": 1e-4
+      },
+      "specular_albedo_network": {
+        "lr": 1e-4
+      },
+      "specular_roughness_network": {
+        "lr": 1e-4
+      },
+      "blend_network": {
+        "lr": 1e-4
+      },
+      "clip_network": {
+        "lr": 1e-4
+      },
+      "rough_network": {
+        "lr": 1e-4
+      },
+      "dino_network": {
+        "lr": 1e-3
+      }
+    }
+}

@@ -1,0 +1,15 @@
+numpy==1.26.0
+scipy==1.11.2
+trimesh
+opencv-python==4.9.0
+scikit-image
+imageio
+imageio-ffmpeg
+pyhocon
+PyMCubes
+tqdm
+icecream
+configargparse
+matplotlib
+lpips
+scikit-learn
